@@ -1,0 +1,32 @@
+Topics : Binary Search
+
+link : https://leetcode.com/problems/sqrtx/description/
+
+#code
+
+
+class Solution {
+    public int mySqrt(int x) {
+        long fst=0;
+        long last=x;
+        long res=-1;
+        while(fst<=last){
+            long mid = fst+(last-fst)/2;
+            long val=mid*mid;
+            if(val == x){
+                return (int)mid;
+            }
+            else if(val>x){
+                last=mid-1;
+            }
+            else{
+                res=mid;
+                fst=mid+1;
+            }
+            
+        }
+        return (int)res;
+    }
+}
+
+Time and Space : O(log N),O(1)
