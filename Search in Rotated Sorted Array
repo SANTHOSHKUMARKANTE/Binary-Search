@@ -1,0 +1,28 @@
+link : https://leetcode.com/problems/search-in-rotated-sorted-array/description/
+
+#code 
+
+
+class Solution {
+    public int search(int[] nums, int target) {
+        int fst=0;
+        int len=nums.length;
+        int last=len-1;
+        int res=-1;
+        while(fst<=last){
+            int mid=fst+(last-fst)/2;
+            if(nums[mid]==target){
+                return mid;
+            }
+            //by comparing last element with mid we can move to left or right
+            else if(nums[mid]>nums[len-1]){
+                
+                    fst=mid+1;
+                }
+            else{
+                last=mid-1;
+            }
+        }
+        return res;
+    }
+}
