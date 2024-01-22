@@ -1,3 +1,8 @@
+Top 50 problems on Binary Search...
+link : https://igotanoffer.com/blogs/tech/binary-search-interview-questions
+
+
+
 Basic Binary Search:
 
 Implement a basic binary search algorithm to find the index of a given element in a sorted array.
